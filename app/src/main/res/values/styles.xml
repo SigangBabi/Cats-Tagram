@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="appTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/backgroundColor</item>
+    </style>
+    <style name="titleStyle">
+        <item name="android:text">Cats-tagram</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:letterSpacing">.1</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:scaleY">2</item>
+    </style>
+    <style name="buttonStyle" parent="Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:letterSpacing">.3</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+    </style>
+    <style name="labelStyle">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center|right</item>
+    </style>
+    <style name="detailsStyle">
+        <item name="android:layout_marginLeft">15sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:gravity">center|left</item>
+    </style>
+</resources>
