@@ -4,13 +4,11 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import okhttp3.Callback
 import retrofit2.Retrofit
 import retrofit2.Call
 import retrofit2.Response
@@ -19,7 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     val baseUrl = "https://mocki.io/"
-    val TAG = "CHECK_RESPONSE"
+    val tag = "CHECK_RESPONSE"
 
 
 
@@ -33,14 +31,14 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        var kollyButton = findViewById<Button>(R.id.buttonKolly)
+        val kollyButton = findViewById<Button>(R.id.buttonKolly)
         kollyButton.setOnClickListener {
-            val Intent = Intent(this,kollyActivity::class.java)
-            getAllData(1, Intent)
+            val openKolly = Intent(this,kollyActivity::class.java)
+            getAllData(1, openKolly)
         }
     }
 
-    fun getAllData(idNo: Int, intent: Intent){
+    private fun getAllData(idNo: Int, intent: Intent){
 
         val api = Retrofit.Builder()
             .baseUrl(baseUrl)
@@ -52,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             override fun onResponse(call: Call<List<catDataItem>>, response: Response<List<catDataItem>>) {
                 if(response.isSuccessful){
                     val info = response.body()
-                    val infos = info?.find { it.id.equals(idNo) }
+                    val infos = info?.find { it.id == idNo }
                     infos?.let {
                         intent.putExtra("name", it.name)
                         intent.putExtra("breed", it.breed)
@@ -69,7 +67,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<List<catDataItem>>, t: Throwable) {
-                Log.i(TAG, "onFailure: ${t.message}")
+                Log.i(tag, "onFailure: ${t.message}")
             }
 
         })
