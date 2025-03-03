@@ -1,4 +1,4 @@
-package com.example.cats_tagram
+package com.example.cats_tagram.api
 
 data class catDataItem(
     val age: String,

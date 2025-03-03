@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activities.main.MainActivity">
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="94dp" />
+
 
     <TextView
         android:id="@+id/textView"
@@ -26,138 +27,171 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.571" />
 
-    <ScrollView
+    <FrameLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:layout_constraintVertical_bias="0.5">
-
-        <LinearLayout
+        app:layout_constraintTop_toTopOf="@+id/guideline">
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline"
+            app:layout_constraintVertical_bias="0.5">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="639dp"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/imageView"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="450dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_weight="4"
-                    android:scaleX="1"
-                    android:src="@drawable/kolly5" />
+                    android:layout_height="639dp"
+                    android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/buttonKolly"
-                    style="@style/buttonStyle"
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="450dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="4"
+                        android:scaleX="1"
+                        android:src="@drawable/kolly5" />
+
+                    <Button
+                        android:id="@+id/buttonKolly"
+                        style="@style/buttonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        android:layout_weight="0"
+                        android:text="@string/kolly" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:text="@string/kolly"
-                    android:layout_gravity="center"
-                    android:layout_margin="20dp"
-                    android:layout_weight="0" />
+                    android:layout_height="639dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="450dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="4"
+                        android:scaleX="1"
+                        android:src="@drawable/loki2" />
+
+                    <Button
+                        android:id="@+id/buttonLoki"
+                        style="@style/buttonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        android:layout_weight="0"
+                        android:text="@string/loki" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="639dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="450dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="4"
+                        android:scaleX="1"
+                        android:src="@drawable/blue" />
+
+                    <Button
+                        android:id="@+id/buttonBlue"
+                        style="@style/buttonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        android:layout_weight="0"
+                        android:text="@string/blue" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="639dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="450dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_weight="4"
+                        android:scaleX="1"
+                        android:scaleY="1.3"
+                        android:src="@drawable/doki" />
+
+                    <Button
+                        android:id="@+id/buttonDoki"
+                        style="@style/buttonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        android:layout_weight="0"
+                        android:text="@string/doki" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="639dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="450dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="4"
+                        android:scaleX="1"
+                        android:src="@drawable/tilapia" />
+
+                    <Button
+                        android:id="@+id/buttonTilaps"
+                        style="@style/buttonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        android:layout_weight="0"
+                        android:text="@string/tilaps" />
+                </LinearLayout>
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="639dp"
-                android:orientation="vertical">
+        </ScrollView>
 
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="450dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_weight="4"
-                    android:scaleX="1"
-                    android:src="@drawable/loki2" />
 
-                <Button
-                    style="@style/buttonStyle"
-                    android:text="@string/loki"
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:layout_margin="20dp"
-                    android:layout_weight="0" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="639dp"
-                android:orientation="vertical">
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+    </FrameLayout>
 
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="match_parent"
-                    android:layout_height="450dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_weight="4"
-                    android:scaleX="1"
-                    android:src="@drawable/blue" />
 
-                <Button
-                    style="@style/buttonStyle"
-                    android:text="@string/blue"
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:layout_margin="20dp"
-                    android:layout_weight="0" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="639dp"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="match_parent"
-                    android:layout_height="450dp"
-                    android:layout_marginHorizontal="20dp"
-                    android:layout_weight="4"
-                    android:scaleY="1.3"
-                    android:scaleX="1"
-                    android:src="@drawable/doki" />
-
-                <Button
-                    style="@style/buttonStyle"
-                    android:text="@string/doki"
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:layout_margin="20dp"
-                    android:layout_weight="0" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="639dp"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/imageView1"
-                    android:layout_width="match_parent"
-                    android:layout_height="450dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_weight="4"
-                    android:scaleX="1"
-                    android:src="@drawable/tilapia" />
-
-                <Button
-                    style="@style/buttonStyle"
-                    android:text="@string/tilaps"
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:layout_margin="20dp"
-                    android:layout_weight="0" />
-            </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,3 @@
-package com.example.cats_tagram
+package com.example.cats_tagram.api
 
 class catData : ArrayList<catDataItem>()
